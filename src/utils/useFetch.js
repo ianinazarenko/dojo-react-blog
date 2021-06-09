@@ -5,7 +5,7 @@ function useFetch(url) {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  console.log('fetch data', 'data:', data)
+  // console.log('fetch data', 'data:', data)
 
   useEffect(() => {
     async function fetchData() {
@@ -24,7 +24,7 @@ function useFetch(url) {
     }
 
     fetchData()
-  }, []) // if state or props url will be updated useEffect will run again
+  }, [url]) // if state or props url will be updated useEffect will run again
   // it doesn't work if url is not a state (or props) variable
 
   return { data, isLoading, error }
