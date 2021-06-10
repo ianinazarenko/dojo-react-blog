@@ -4,7 +4,7 @@ import BlogList from './BlogList'
 
 function Home() {
   console.log('Home render')
-  const { data, isLoading, error } = useFetch('http://localhost:8000/posts')
+  const { data, isLoading, error } = useFetch('http://localhost:8080/posts')
 
   return (
     <div className='home'>
