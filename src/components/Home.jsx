@@ -3,11 +3,11 @@ import useFetch from 'utils/useFetch'
 import BlogList from './BlogList'
 
 function Home() {
-  console.log('Home render')
+  // console.log('Home render')
   const { data, isLoading, error } = useFetch('http://localhost:8080/posts')
 
   return (
-    <div className='home'>
+    <div className="home">
       <h1>All blogs</h1>
       {error ? { error } : isLoading ? 'Loading...' : <BlogList posts={data} />}
     </div>
